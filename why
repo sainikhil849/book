@@ -1,0 +1,85 @@
+Core Framework & Build Tools
+
+React with TypeScript: Chosen for building a robust, type-safe single-page application. TypeScript adds static typing to JavaScript, helping catch errors early and improve code maintainability.
+Vite: Used as the build tool because it's significantly faster than alternatives like Create React App, offering instant server start and hot module replacement.
+Styling & UI Components
+
+Tailwind CSS: A utility-first CSS framework that enables rapid UI development with pre-built classes. It's used throughout the project for responsive design and consistent styling.
+shadcn/ui: A collection of reusable components built on top of Radix UI. Used for:
+Form inputs (Input, Select)
+Buttons and interactive elements
+Modals and dialogs
+Toast notifications
+Lucide React: Provides a comprehensive set of icons used throughout the UI for better visual communication.
+State Management & Data Fetching
+
+TanStack Query (React Query): Used for managing server state and data fetching. It provides:
+Automatic caching
+Background data updates
+Loading and error states
+Optimistic updates
+Routing
+
+React Router DOM: Handles client-side routing, enabling navigation between different pages:
+/dashboard: Main book browsing page
+/login & /register: Authentication pages
+/add-book: Book submission page
+/my-books: User's book management
+/profile: User profile page
+Form Handling
+
+React Hook Form: Used for form management with:
+Built-in validation
+Performance optimization
+Easy form state management
+Zod: Type validation library integrated with React Hook Form for robust form validation
+Key Components Structure
+
+src/
+├── components/
+│   ├── book/           # Book-related components
+│   ├── layout/         # Layout components (Navbar, etc.)
+│   └── ui/            # Reusable UI components
+├── contexts/          # React contexts (Auth)
+├── hooks/            # Custom React hooks
+├── pages/            # Page components
+├── services/         # API services
+└── types/            # TypeScript type definitions
+Features Implementation
+
+Authentication: Implemented using context API for state management and local storage for session persistence
+Book Management: CRUD operations for books with filtering and search capabilities
+Responsive Design: Mobile-first approach using Tailwind's responsive classes
+User Experience:
+Toast notifications for user feedback
+Loading states for async operations
+Smooth animations and transitions
+Form validation and error handling
+Deployment
+
+Netlify: Chosen for deployment because it offers:
+Continuous deployment from Git
+Automatic HTTPS
+Preview deployments
+Easy custom domain setup
+Development Experience
+
+TypeScript: Provides better developer experience with:
+Type safety
+Better IDE support
+Easier refactoring
+Project Structure: Organized for:
+Scalability
+Code reusability
+Easy maintenance
+Clear separation of concerns
+This architecture was chosen to create a modern, maintainable, and user-friendly book exchange platform that can scale as needed while providing a great development experience.
+
+The combination of these technologies enables:
+
+Fast development cycles
+Good performance
+Type safety
+Great user experience
+Easy maintenance
+Scalable architecture
