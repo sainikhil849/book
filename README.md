@@ -56,3 +56,16 @@ yarn dev
 pnpm dev
 Visit http://localhost:5173 to view the app in your browser.
 
+src/
+├── components/     # Shared UI components (buttons, cards, etc.)
+├── contexts/       # Global context providers (e.g., auth, theme)
+├── hooks/          # Custom React hooks
+├── lib/            # Utility functions (e.g., API helpers)
+├── pages/          # Page-level components
+├── services/       # API interaction logic
+└── types/          # TypeScript types and interfaces
+
+Created with ❤️ by Sai Nikhil
+
+
+
