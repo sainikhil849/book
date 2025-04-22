@@ -1,3 +1,8 @@
+Design documentation and demo video are available at: https://drive.google.com/drive/folders/1voYzkMVuL6LPetYTz0hh8heFsCabfkbH?usp=sharing.
+It includes full architecture, database schema, wireframes, and a walkthrough of all core features.
+
+
+
 # 📖 PageTurn – Book Exchange Marketplace
 
 PageTurn is a modern, community-driven book exchange platform that allows users to browse, list, and trade books easily. Designed with a sleek UI and robust functionality, PageTurn bridges book lovers through a simple yet powerful interface.
