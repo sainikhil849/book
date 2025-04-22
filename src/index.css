@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 35 10% 15%;
+
+    --card: 40 33% 98%;
+    --card-foreground: 35 10% 15%;
+
+    --popover: 40 33% 98%;
+    --popover-foreground: 35 10% 15%;
+
+    --primary: 220 80% 30%;
+    --primary-foreground: 40 33% 98%;
+
+    --secondary: 140 50% 25%;
+    --secondary-foreground: 40 33% 98%;
+
+    --muted: 35 20% 85%;
+    --muted-foreground: 35 10% 40%;
+
+    --accent: 35 80% 25%;
+    --accent-foreground: 40 33% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 33% 98%;
+
+    --border: 35 20% 80%;
+    --input: 35 20% 80%;
+    --ring: 35 80% 25%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 40 33% 98%;
+    --sidebar-foreground: 35 10% 15%;
+    --sidebar-primary: 220 80% 30%;
+    --sidebar-primary-foreground: 40 33% 98%;
+    --sidebar-accent: 35 20% 95%;
+    --sidebar-accent-foreground: 35 10% 15%;
+    --sidebar-border: 35 20% 85%;
+    --sidebar-ring: 220 80% 30%;
+  }
+
+  .dark {
+    --background: 35 10% 10%;
+    --foreground: 40 20% 95%;
+
+    --card: 35 10% 12%;
+    --card-foreground: 40 20% 95%;
+
+    --popover: 35 10% 12%;
+    --popover-foreground: 40 20% 95%;
+
+    --primary: 220 80% 60%;
+    --primary-foreground: 35 10% 10%;
+
+    --secondary: 140 50% 40%;
+    --secondary-foreground: 35 10% 10%;
+
+    --muted: 35 10% 20%;
+    --muted-foreground: 35 10% 60%;
+
+    --accent: 35 80% 45%;
+    --accent-foreground: 35 10% 10%;
+
+    --destructive: 0 62.8% 50.6%;
+    --destructive-foreground: 40 20% 95%;
+
+    --border: 35 10% 25%;
+    --input: 35 10% 25%;
+    --ring: 35 80% 45%;
+    
+    --sidebar-background: 35 10% 12%;
+    --sidebar-foreground: 40 20% 95%;
+    --sidebar-primary: 220 80% 60%;
+    --sidebar-primary-foreground: 35 10% 10%;
+    --sidebar-accent: 35 10% 20%;
+    --sidebar-accent-foreground: 40 20% 95%;
+    --sidebar-border: 35 10% 25%;
+    --sidebar-ring: 220 80% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl mb-6;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl mb-4;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl mb-3;
+  }
+}
+
+@layer components {
+  .book-card {
+    @apply relative bg-white rounded-md overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+  
+  .book-cover {
+    @apply aspect-[2/3] object-cover w-full;
+  }
+  
+  .book-info {
+    @apply p-4;
+  }
+  
+  .auth-container {
+    @apply flex flex-col items-center justify-center min-h-screen p-4 bg-gradient-to-br from-book-light to-white;
+  }
+  
+  .auth-card {
+    @apply bg-white/80 backdrop-blur-xl p-8 rounded-2xl shadow-xl border border-gray-100 max-w-md w-full animate-fade-in;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-200 focus:ring-2 focus:ring-book-primary/20 focus:border-book-primary transition-all duration-200;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  .form-button {
+    @apply w-full py-2.5 px-4 rounded-lg bg-gradient-to-r from-book-primary to-book-secondary text-white font-medium hover:opacity-90 transition-opacity duration-200;
+  }
+}
+
+@layer utilities {
+  .animate-gradient-slow {
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-xl border border-gray-100/20 shadow-lg;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-book-primary to-book-secondary bg-clip-text text-transparent;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.gradient-animate {
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
